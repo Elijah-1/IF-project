@@ -2,6 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: docs/home
+root: docs/introductie
 chapters:
-- file: docs/notebook
+  - file: docs/dataset_en_preprocessing
+  - file: docs/notebook
+  - file: docs/reflectie
+  - file: docs/rolverdeling
