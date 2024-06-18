@@ -23,6 +23,7 @@ body {
 }
 
 .theme-switch-button,
+.primary-toggle,
 .search-button-field {
   display: none !important;
 }
@@ -41,4 +42,20 @@ body {
 
 code {
   color: var(--gcs);
+}
+
+.bd-content,
+.bd-article-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-right: 0 !important;
+  overflow: hidden;
+}
+
+.bd-sidebar-secondary {
+  max-width: 12% !important;
+}
+
+.js-plotly-plot {
+  box-shadow: 0 60px 80px rgba(0, 0, 0, 0.6), 0 45px 26px rgba(0, 0, 0, 0.14);
 }
