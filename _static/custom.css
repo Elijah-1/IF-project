@@ -1,0 +1,44 @@
+:root {
+  --bcs: #f1f5f8;
+  --gcs: #04a101;
+  --pst-color-primary: var(--gcs) !important;
+  --pst-color-secondary: #92d051 !important;
+}
+
+body {
+  background-color: var(--bcs);
+}
+
+.bd-sidebar {
+  background-color: var(--bcs);
+  overflow: hidden !important;
+}
+
+.bd-sidebar-secondary {
+  background-color: var(--bcs);
+}
+
+.bd-header-article {
+  background-color: var(--bcs);
+}
+
+.theme-switch-button,
+.search-button-field {
+  display: none !important;
+}
+
+.reference,
+.std-doc {
+  color: var(--gcs);
+  text-decoration: none;
+}
+
+.reference:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--gcs);
+  border: none;
+}
+
+code {
+  color: var(--gcs);
+}
