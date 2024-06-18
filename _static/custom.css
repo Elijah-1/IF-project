@@ -22,7 +22,7 @@ body {
   background-color: var(--bcs);
 }
 
-/* .theme-switch-button, */
+.theme-switch-button,
 .search-button-field {
   display: none !important;
 }
