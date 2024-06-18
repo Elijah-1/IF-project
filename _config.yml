@@ -1,8 +1,10 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Jupyter Book # Change this to your book title.
+title: Nature-Emissions Dynamics # Change this to your book title.
 author: Groep L1 # Change this to your name (or your team/organization name).
+logo: "_static/logo.png"
+copyright: "2024"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -25,6 +27,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  favicon: "_static/logo.png"
 
 # Add launch buttons
 launch_buttons:
