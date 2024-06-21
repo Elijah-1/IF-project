@@ -14,7 +14,7 @@ Na het opschonen hebben we nu in totaal 7 kolommen en 2524 rijen verspreid over 
 
 ### Variable descriptions
 
-De gebruikte variabelen zijn: Disasters, Year, Entity, Substance, Emissions en Sector
+De gebruikte variabelen zijn: `Disasters`, `Year`, `Entity`, `Substance`, `Emissions` en `Sector`
 
 Deze variabelen kunnen we verder classificeren onder verschillende combinaties van meetniveaus:
 
