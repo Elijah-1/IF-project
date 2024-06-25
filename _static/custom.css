@@ -73,9 +73,7 @@ blockquote {
   border-left-color: var(--gcs);
 }
 
-br {
-  display: block;
-  margin-bottom: 2px;
-  font-size: 2px;
-  line-height: 2px;
+.cell_output .text_html {
+  border-radius: 20px !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
