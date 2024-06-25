@@ -72,3 +72,10 @@ blockquote {
   background-color: #eceef1;
   border-left-color: var(--gcs);
 }
+
+br {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 2px;
+  line-height: 2px;
+}
