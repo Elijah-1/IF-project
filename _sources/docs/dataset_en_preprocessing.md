@@ -14,17 +14,17 @@ Uiteindelijk herstructureerden we de dataset zodat de variabelen `Emission`, `Se
 
 We verwijderden als laatste stap de irrelevante jaartallen (1932-1970) uit de dataset over olieproductie. Daarnaast filterden we de variabelen die we niet gebruiken, waardoor we het aantal variabelen in de dataset van zes naar drie reduceerden.
 
-Na het opschonen hebben we nu in totaal 8 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel ‘Year’ en ‘Disasters’ in meerdere datasets voorkomen.
+Na het opschonen hebben we nu in totaal 8 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel `Year` en `Disasters` in meerdere datasets voorkomen.
 
 ### Variable descriptions
 
-De gebruikte variabelen zijn: `Disasters`, `Year`, `Entity`, `Emissions`, `Sector` en `oil_prod32_14`
+De gebruikte variabelen zijn: `Disasters`, `Year`, `Entity`, `Emissions`, `Sector`, `earthquake` en `oil_prod`
 
 Deze variabelen kunnen we verder classificeren onder verschillende combinaties van meetniveaus:
 
 - Discrete & Nominal variables: `Sector`, `Entity`
 - Discrete & Interval variables: `Year`
-- Discrete & Ratio variables: `Disasters`, `Emissions`, `Oil_prod32_14`
+- Discrete & Ratio variables: `Disasters`, `Emissions`, `oil_prod`, `earthquake`
 
 Deze classificatie helpt bij het bepalen van de juiste statistische methoden en analyse benaderingen voor elk type variabele.
 
