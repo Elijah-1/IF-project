@@ -379,7 +379,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-descriptions">Variable descriptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabele">Variabele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregaties">Aggregaties</a></li>
 </ul>
             </nav>
@@ -397,16 +397,16 @@ document.write(`
 <p>In de eerste teamvergadering besloten we snel welke datasets we wilden onderzoeken. We kozen ervoor om ons te richten op datasets over klimaatverandering en bespraken de verschillende perspectieven die we hierbij konden gebruiken. Uiteindelijk selecteerden we drie datasets: de eerste betreft het aantal natuurrampen van 1900-2024 in de wereld, de tweede heeft betrekking op de broeikasgasuitstoot van 1970-2022 van alle landen per sector en de derde dataset geeft informatie over de olieproductie, olieprijzen en andere relevante informatie over olie van 1932-2014. We behouden de relevante variabelen en jaartallen uit drie datasets om verder de correlaties tussen het aantal natuurrampen en de broeikasgasuitstoot te onderzoeken.</p>
 <section id="cleaning">
 <h2>Cleaning<a class="headerlink" href="#cleaning" title="Link to this heading">#</a></h2>
-<p>Om een helder overzicht van de data te krijgen, was het noodzakelijk om beide datasets op te schonen. De dataset over natuurrampen vereiste weinig aanpassingen, terwijl de datasets over broeikasgasuitstoot en olieproductie een grondige herstructurering nodig hadden.</p>
+<p>Om een helder overzicht van de data te krijgen, was het noodzakelijk om de datasets op te schonen. De dataset over natuurrampen vereiste weinig aanpassingen, terwijl de datasets over broeikasgasuitstoot en olieproductie een grondige herstructurering nodig hadden.</p>
 <p>Allereerst filterden we de irrelevante jaartallen (1900-1969) en de bijbehorende informatie uit de dataset over natuurrampen. Deze dataset heeft maar 3 variabelen: <code class="docutils literal notranslate"><span class="pre">Entity</span></code>, <code class="docutils literal notranslate"><span class="pre">Year</span></code>, <code class="docutils literal notranslate"><span class="pre">Disaster</span></code>, met informatie over verschillende typen natuurrampen. Door deze dataset op een andere manier te interpreteren, kunnen we de verschillende typen natuurrampen omzetten in variabelen, waardoor de dataset aanzienlijk uitgebreid wordt met meer variabelen.</p>
-<p>Vervolgens richtten we ons op de tweede dataset, de dataset over broeikasgasuitstoot. We transformeerden de jaartallen, die oorspronkelijk als variabelen waren opgenomen, naar rijen. Hierdoor werd ‘Year’ een kolom met waarden van 1970 tot 2022, wat een beter overzicht bood van de broeikasgasuitstoot door de jaren heen. Daarna maakten we de dataset compacter door irrelevante variabelen te verwijderen die geen invloed hadden op de correlaties tussen de datasets.</p>
+<p>Vervolgens richtten we ons op de tweede dataset, de dataset over broeikasgasuitstoot. We transformeerden de jaartallen, die oorspronkelijk als variabelen waren opgenomen, naar rijen. Hierdoor werd <code class="docutils literal notranslate"><span class="pre">Year</span></code> een kolom met waarden van 1970 tot 2022, wat een beter overzicht bood van de broeikasgasuitstoot door de jaren heen. Daarna maakten we de dataset compacter door irrelevante variabelen te verwijderen die geen invloed hadden op de correlaties tussen de datasets.</p>
 <p>Uiteindelijk herstructureerden we de dataset zodat de variabelen <code class="docutils literal notranslate"><span class="pre">Emission</span></code>, <code class="docutils literal notranslate"><span class="pre">Sector</span></code> en <code class="docutils literal notranslate"><span class="pre">Year</span></code> als kolommen werden gepresenteerd. Hierdoor hadden we nu drie kolommen in plaats van 57 en 1.379 rijen in plaats van 213</p>
-<p>We verwijderden als laatste stap de irrelevante jaartallen (1932-1970) uit de dataset over olieproductie. Daarnaast filterden we de variabelen die we niet gebruiken, waardoor we het aantal variabelen in de dataset van zes naar drie reduceerden.</p>
-<p>Na het opschonen hebben we nu in totaal 8 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel <code class="docutils literal notranslate"><span class="pre">Year</span></code> en <code class="docutils literal notranslate"><span class="pre">Disasters</span></code> in meerdere datasets voorkomen.</p>
+<p>We verwijderden als laatste stap de irrelevante jaartallen (1932-1969) uit de dataset over olieproductie. Daarnaast filterden we de variabelen die we niet gebruiken, waardoor we het aantal variabelen in de dataset van zes naar drie reduceerden.</p>
+<p>Na het opschonen hebben we nu in totaal 8 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel <code class="docutils literal notranslate"><span class="pre">Year</span></code> in meerdere datasets voorkomt.</p>
 </section>
-<section id="variable-descriptions">
-<h2>Variable descriptions<a class="headerlink" href="#variable-descriptions" title="Link to this heading">#</a></h2>
-<p>De gebruikte variabelen zijn: <code class="docutils literal notranslate"><span class="pre">Disasters</span></code>, <code class="docutils literal notranslate"><span class="pre">Year</span></code>, <code class="docutils literal notranslate"><span class="pre">Entity</span></code>, <code class="docutils literal notranslate"><span class="pre">Emissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Sector</span></code>, <code class="docutils literal notranslate"><span class="pre">earthquake</span></code> en <code class="docutils literal notranslate"><span class="pre">oil_prod</span></code></p>
+<section id="variabele">
+<h2>Variabele<a class="headerlink" href="#variabele" title="Link to this heading">#</a></h2>
+<p>De gebruikte variabelen zijn: <code class="docutils literal notranslate"><span class="pre">Disasters</span></code>, <code class="docutils literal notranslate"><span class="pre">Year</span></code>, <code class="docutils literal notranslate"><span class="pre">Entity</span></code>, <code class="docutils literal notranslate"><span class="pre">Emissions</span></code>, <code class="docutils literal notranslate"><span class="pre">Sector</span></code>, <code class="docutils literal notranslate"><span class="pre">earthquake</span></code> en <code class="docutils literal notranslate"><span class="pre">oil_prod</span></code>.</p>
 <p>Deze variabelen kunnen we verder classificeren onder verschillende combinaties van meetniveaus:</p>
 <ul class="simple">
 <li><p>Discrete &amp; Nominal variables: <code class="docutils literal notranslate"><span class="pre">Sector</span></code>, <code class="docutils literal notranslate"><span class="pre">Entity</span></code></p></li>
@@ -487,7 +487,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-descriptions">Variable descriptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabele">Variabele</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregaties">Aggregaties</a></li>
 </ul>
   </nav></div>
