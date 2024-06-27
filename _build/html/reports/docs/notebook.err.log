@@ -18,117 +18,73 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-years = nd_ex_df['Year'].unique()
-years.sort()
+years = oe_df['year']
+oil_production = oe_df['oil_prod32_14']
+number_of_disasters = oe_df['Disasters']
 
-# Get disaster counts for all years
-disaster_counts_all_years = nd_ex_df.groupby('Entity')['Disasters'].sum().reset_index()
+years = data['year']
+oil_production = data['oil_prod32_14']
+number_of_disasters = data['Disasters']
 
-# Function to get disaster counts for a specific year
-def get_disaster_counts(year):
-    return nd_ex_df[nd_ex_df['Year'] == year].groupby('Entity')['Disasters'].sum().reset_index()
+# Create the figure
+fig = go.Figure()
 
-# Create the initial pie chart with all years
-fig_pie = go.Figure()
-
-fig_pie.add_trace(go.Pie(
-    labels=disaster_counts_all_years['Entity'],
-    values=disaster_counts_all_years['Disasters'],
-    hole=0.8,
-    marker=dict(colors=[color_map[disaster] for disaster in disaster_counts_all_years['Entity']]),
-    textposition='outside',
-    textinfo='percent'
+# Add oil production line
+fig.add_trace(go.Scatter(
+    x=years,
+    y=oil_production,
+    mode='lines+markers',
+    name='Oil Production',
+    yaxis='y1',
+    line=dict(color='black'),
+    marker=dict(color='black'),
+    hovertemplate='Year: %{x}<br>Oil Production: %{y}'
 ))
 
-# Create frames for each year
-frames = []
-for year in years:
-    counts = get_disaster_counts(year)
-    frames.append(go.Frame(
-        data=[go.Pie(
-            labels=counts['Entity'],
-            values=counts['Disasters'],
-            hole=0.8,
-            marker=dict(colors=[color_map[disaster] for disaster in counts['Entity']]),
-            textposition='outside',
-            textinfo='percent'
-        )],
-        name=str(year)
-    ))
-
-# Add an "All years" frame
-frames.append(go.Frame(
-    data=[go.Pie(
-        labels=disaster_counts_all_years['Entity'],
-        values=disaster_counts_all_years['Disasters'],
-        hole=0.8,
-        marker=dict(colors=[color_map[disaster] for disaster in disaster_counts_all_years['Entity']]),
-        textposition='outside',
-        textinfo='percent'
-    )],
-    name='All years'
+# Add number of disasters line
+fig.add_trace(go.Scatter(
+    x=years,
+    y=number_of_disasters,
+    mode='lines+markers',
+    name='Number of Earthquakes',
+    yaxis='y2',
+    line=dict(color='#008000'),  # Using hex code for green
+    marker=dict(color='#008000'),  # Using hex code for green
+    hovertemplate='Year: %{x}<br>Number of Earthquakes: %{y}'
 ))
 
-# Update layout with slider
-fig_pie.update_layout(
-    title_text='Frequency of Different Disasters',
-    updatemenus=[{
-        'buttons': [{
-            'args': [None, {'frame': {'duration': 500, 'redraw': True}, 'fromcurrent': True}],
-            'label': 'Play',
-            'method': 'animate'
-        }, {
-            'args': [[None], {'frame': {'duration': 0, 'redraw': True}, 'mode': 'immediate', 'transition': {'duration': 0}}],
-            'label': 'Pause',
-            'method': 'animate'
-        }],
-        'direction': 'left',
-        'pad': {'r': 10, 't': 87},
-        'showactive': False,
-        'type': 'buttons',
-        'x': 0.1,
-        'xanchor': 'right',
-        'y': 0,
-        'yanchor': 'top'
-    }],
-    sliders=[{
-        'active': len(years),
-        'yanchor': 'top',
-        'xanchor': 'left',
-        'currentvalue': {
-            'font': {'size': 20},
-            'prefix': 'Year: ',
-            'visible': True,
-            'xanchor': 'right'
-        },
-        'transition': {'duration': 300, 'easing': 'cubic-in-out'},
-        'pad': {'b': 10, 't': 50},
-        'len': 0.9,
-        'x': 0.1,
-        'y': 0,
-        'steps': [{
-            'args': [[str(year)], {'frame': {'duration': 300, 'redraw': True}, 'mode': 'immediate', 'transition': {'duration': 300}}],
-            'label': str(year),
-            'method': 'animate'
-        } for year in years] + [{
-            'args': [['All years'], {'frame': {'duration': 300, 'redraw': True}, 'mode': 'immediate', 'transition': {'duration': 300}}],
-            'label': 'All years',
-            'method': 'animate'
-        }]
-    }],
-    'height': 600
+# Update layout for dual y-axis
+fig.update_layout(
+    title='Oil Production and Number of Earthquakes Over the Years',
+    xaxis=dict(title='Year'),
+    yaxis=dict(
+        title='Oil Production',
+        titlefont=dict(color='black'),
+        tickfont=dict(color='black')
+    ),
+    yaxis2=dict(
+        title='Number of Earthquakes',
+        titlefont=dict(color='#008000'),  # Using hex code for green
+        tickfont=dict(color='#008000'),  # Using hex code for green
+        overlaying='y',
+        side='right'
+    ),
+    legend=dict(x=0.1, y=1.1, orientation='h')
 )
 
-fig_pie.frames = frames
-
-# Show the plot
-fig_pie.show()
+# Show the figure
+fig.show()
 ------------------
 
 
-[0;36m  Cell [0;32mIn[3], line 99[0;36m[0m
-[0;31m    'height': 600[0m
-[0m            ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m positional argument follows keyword argument
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[7], line 5[0m
+[1;32m      2[0m oil_production [38;5;241m=[39m oe_df[[38;5;124m'[39m[38;5;124moil_prod32_14[39m[38;5;124m'[39m]
+[1;32m      3[0m number_of_disasters [38;5;241m=[39m oe_df[[38;5;124m'[39m[38;5;124mDisasters[39m[38;5;124m'[39m]
+[0;32m----> 5[0m years [38;5;241m=[39m [43mdata[49m[[38;5;124m'[39m[38;5;124myear[39m[38;5;124m'[39m]
+[1;32m      6[0m oil_production [38;5;241m=[39m data[[38;5;124m'[39m[38;5;124moil_prod32_14[39m[38;5;124m'[39m]
+[1;32m      7[0m number_of_disasters [38;5;241m=[39m data[[38;5;124m'[39m[38;5;124mDisasters[39m[38;5;124m'[39m]
 
+[0;31mNameError[0m: name 'data' is not defined
 
