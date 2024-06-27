@@ -4,21 +4,21 @@ In de eerste teamvergadering besloten we snel welke datasets we wilden onderzoek
 
 ### Cleaning
 
-Om een helder overzicht van de data te krijgen, was het noodzakelijk om beide datasets op te schonen. De dataset over natuurrampen vereiste weinig aanpassingen, terwijl de datasets over broeikasgasuitstoot en olieproductie een grondige herstructurering nodig hadden.
+Om een helder overzicht van de data te krijgen, was het noodzakelijk om de datasets op te schonen. De dataset over natuurrampen vereiste weinig aanpassingen, terwijl de datasets over broeikasgasuitstoot en olieproductie een grondige herstructurering nodig hadden.
 
 Allereerst filterden we de irrelevante jaartallen (1900-1969) en de bijbehorende informatie uit de dataset over natuurrampen. Deze dataset heeft maar 3 variabelen: `Entity`, `Year`, `Disaster`, met informatie over verschillende typen natuurrampen. Door deze dataset op een andere manier te interpreteren, kunnen we de verschillende typen natuurrampen omzetten in variabelen, waardoor de dataset aanzienlijk uitgebreid wordt met meer variabelen.
 
-Vervolgens richtten we ons op de tweede dataset, de dataset over broeikasgasuitstoot. We transformeerden de jaartallen, die oorspronkelijk als variabelen waren opgenomen, naar rijen. Hierdoor werd 'Year' een kolom met waarden van 1970 tot 2022, wat een beter overzicht bood van de broeikasgasuitstoot door de jaren heen. Daarna maakten we de dataset compacter door irrelevante variabelen te verwijderen die geen invloed hadden op de correlaties tussen de datasets.
+Vervolgens richtten we ons op de tweede dataset, de dataset over broeikasgasuitstoot. We transformeerden de jaartallen, die oorspronkelijk als variabelen waren opgenomen, naar rijen. Hierdoor werd `Year` een kolom met waarden van 1970 tot 2022, wat een beter overzicht bood van de broeikasgasuitstoot door de jaren heen. Daarna maakten we de dataset compacter door irrelevante variabelen te verwijderen die geen invloed hadden op de correlaties tussen de datasets.
 
 Uiteindelijk herstructureerden we de dataset zodat de variabelen `Emission`, `Sector` en `Year` als kolommen werden gepresenteerd. Hierdoor hadden we nu drie kolommen in plaats van 57 en 1.379 rijen in plaats van 213
 
-We verwijderden als laatste stap de irrelevante jaartallen (1932-1970) uit de dataset over olieproductie. Daarnaast filterden we de variabelen die we niet gebruiken, waardoor we het aantal variabelen in de dataset van zes naar drie reduceerden.
+We verwijderden als laatste stap de irrelevante jaartallen (1932-1969) uit de dataset over olieproductie. Daarnaast filterden we de variabelen die we niet gebruiken, waardoor we het aantal variabelen in de dataset van zes naar drie reduceerden.
 
-Na het opschonen hebben we nu in totaal 8 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel `Year` en `Disasters` in meerdere datasets voorkomen.
+Na het opschonen hebben we nu in totaal 8 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel `Year` in meerdere datasets voorkomt.
 
-### Variable descriptions
+### Variabele
 
-De gebruikte variabelen zijn: `Disasters`, `Year`, `Entity`, `Emissions`, `Sector`, `earthquake` en `oil_prod`
+De gebruikte variabelen zijn: `Disasters`, `Year`, `Entity`, `Emissions`, `Sector`, `earthquake` en `oil_prod`.
 
 Deze variabelen kunnen we verder classificeren onder verschillende combinaties van meetniveaus:
 
