@@ -381,6 +381,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabelen">Variabelen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregaties">Aggregaties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orginele-datasets">Orginele datasets</a></li>
 </ul>
             </nav>
         </div>
@@ -403,6 +404,7 @@ document.write(`
 <p>Uiteindelijk herstructureerden we de dataset zodat de variabelen <code class="docutils literal notranslate"><span class="pre">Emission</span></code>, <code class="docutils literal notranslate"><span class="pre">Sector</span></code> en <code class="docutils literal notranslate"><span class="pre">Year</span></code> als kolommen werden gepresenteerd. Hierdoor hadden we nu drie kolommen in plaats van 57 en 1.379 rijen in plaats van 213</p>
 <p>We verwijderden als laatste stap de irrelevante jaartallen (1932-1969) uit de dataset over olieproductie. Daarnaast filterden we de variabelen die we niet gebruiken, waardoor we het aantal variabelen in de dataset van zes naar drie reduceerden.</p>
 <p>Na het opschonen hebben we nu in totaal 9 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel <code class="docutils literal notranslate"><span class="pre">Year</span></code> in meerdere datasets voorkomt.</p>
+<p><a class="reference external" href="https://github.com/Elijah-1/IF-project/tree/main/datasets">Klik hier op de datasets te zien</a></p>
 </section>
 <section id="variabelen">
 <h2>Variabelen<a class="headerlink" href="#variabelen" title="Link to this heading">#</a></h2>
@@ -420,6 +422,14 @@ document.write(`
 <h2>Aggregaties<a class="headerlink" href="#aggregaties" title="Link to this heading">#</a></h2>
 <p>De laatste stap in het voorbereiden van de datasets was het samenvoegen ervan. We wilden vooral de correlaties tussen de toename van broeikasgasuitstoot en het aantal natuurrampen onderzoeken. Daarom combineerden we eerst het totale aantal natuurrampen met de totale broeikasgasuitstoot van 1970-2022. Hierdoor kregen we een overzicht van de veranderingen in de jaarlijkse broeikasgasuitstoot en het aantal natuurrampen. Vervolgens vergeleken we de broeikasgasuitstoot van de sectoren individueel met de verschillende typen rampen. Hierdoor kregen we inzicht in de correlatie tussen sectoren en rampsoorten.</p>
 <p>Als laatste combineerden we de olieproductie per land tot een totale olieproductie per jaar. Vervolgens voegden we deze gegevens samen met de gegevens over aardbevingen, zodat we de totale olieproductie per ton per jaar konden vergelijken met het aantal aardbevingen.</p>
+</section>
+<section id="orginele-datasets">
+<h2>Orginele datasets<a class="headerlink" href="#orginele-datasets" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://edgar.jrc.ec.europa.eu/report_2023?vis=ghgtot#emissions_table">Dataset over emissies</a></p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/datasets/willianoliveiragibin/natural-disasters-increasing/data">Dataset over natuurrampen</a></p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/datasets/raspberrypie/oil-and-gas">Dataset over olieproductie</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -490,6 +500,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabelen">Variabelen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregaties">Aggregaties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orginele-datasets">Orginele datasets</a></li>
 </ul>
   </nav></div>
 

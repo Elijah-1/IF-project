@@ -16,6 +16,8 @@ We verwijderden als laatste stap de irrelevante jaartallen (1932-1969) uit de da
 
 Na het opschonen hebben we nu in totaal 9 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel `Year` in meerdere datasets voorkomt.
 
+[Klik hier op de datasets te zien](https://github.com/Elijah-1/IF-project/tree/main/datasets)
+
 ### Variabelen
 
 De gebruikte variabelen zijn: `Disasters`, `Year`, `Entity`, `Emissions`, `Sector`, `earthquake` en `oil_prod`.
@@ -34,3 +36,9 @@ Deze classificatie helpt bij het bepalen van de juiste statistische methoden en 
 De laatste stap in het voorbereiden van de datasets was het samenvoegen ervan. We wilden vooral de correlaties tussen de toename van broeikasgasuitstoot en het aantal natuurrampen onderzoeken. Daarom combineerden we eerst het totale aantal natuurrampen met de totale broeikasgasuitstoot van 1970-2022. Hierdoor kregen we een overzicht van de veranderingen in de jaarlijkse broeikasgasuitstoot en het aantal natuurrampen. Vervolgens vergeleken we de broeikasgasuitstoot van de sectoren individueel met de verschillende typen rampen. Hierdoor kregen we inzicht in de correlatie tussen sectoren en rampsoorten.
 
 Als laatste combineerden we de olieproductie per land tot een totale olieproductie per jaar. Vervolgens voegden we deze gegevens samen met de gegevens over aardbevingen, zodat we de totale olieproductie per ton per jaar konden vergelijken met het aantal aardbevingen.
+
+### Orginele datasets
+
+- [Dataset over emissies](https://edgar.jrc.ec.europa.eu/report_2023?vis=ghgtot#emissions_table)
+- [Dataset over natuurrampen](https://www.kaggle.com/datasets/willianoliveiragibin/natural-disasters-increasing/data)
+- [Dataset over olieproductie](https://www.kaggle.com/datasets/raspberrypie/oil-and-gas)
