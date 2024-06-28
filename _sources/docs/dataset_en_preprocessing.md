@@ -16,7 +16,7 @@ We verwijderden als laatste stap de irrelevante jaartallen (1932-1969) uit de da
 
 Na het opschonen hebben we nu in totaal 9 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel `Year` in meerdere datasets voorkomt.
 
-### Variabele
+### Variabelen
 
 De gebruikte variabelen zijn: `Disasters`, `Year`, `Entity`, `Emissions`, `Sector`, `earthquake` en `oil_prod`.
 
