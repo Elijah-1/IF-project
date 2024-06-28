@@ -14,7 +14,7 @@ Uiteindelijk herstructureerden we de dataset zodat de variabelen `Emission`, `Se
 
 We verwijderden als laatste stap de irrelevante jaartallen (1932-1969) uit de dataset over olieproductie. Daarnaast filterden we de variabelen die we niet gebruiken, waardoor we het aantal variabelen in de dataset van zes naar drie reduceerden.
 
-Na het opschonen hebben we nu in totaal 8 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel `Year` in meerdere datasets voorkomt.
+Na het opschonen hebben we nu in totaal 9 kolommen en 2570 rijen verspreid over de drie datasets, waarbij de variabel `Year` in meerdere datasets voorkomt.
 
 ### Variabele
 
