@@ -22,9 +22,10 @@ De gebruikte variabelen zijn: `Disasters`, `Year`, `Entity`, `Emissions`, `Secto
 
 Deze variabelen kunnen we verder classificeren onder verschillende combinaties van meetniveaus:
 
-- Discrete & Nominal variables: `Sector`, `Entity`
-- Discrete & Interval variables: `Year`
-- Discrete & Ratio variables: `Disasters`, `Emissions`, `oil_prod`, `earthquake`
+- Discrete & Nominal variabelen: `Sector`, `Entity`
+- Discrete & Interval variabelen: `Year`
+- Discrete & Ratio variabelen: `Disasters`, `earthquake`
+- Continuous & Ratio variabelen: `Emissions`, `oil_prod`
 
 Deze classificatie helpt bij het bepalen van de juiste statistische methoden en analyse benaderingen voor elk type variabele.
 
